@@ -2,7 +2,7 @@ package actividadHibernate.modelo
 
 import actividadHibernate.modelo.clases.Direccion
 import actividadHibernate.modelo.clases.Taller
-import actividadHibernate.modelo.sentencias.insertTaller
+import actividadHibernate.modelo.sentencias.onInsert
 import jakarta.persistence.EntityManager
 import jakarta.persistence.EntityManagerFactory
 import jakarta.persistence.Persistence

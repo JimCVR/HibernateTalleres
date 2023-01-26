@@ -1,44 +1,68 @@
 package actividadHibernate.modelo.sentencias
 
+import actividadHibernate.modelo.GestorModelo
 import actividadHibernate.modelo.clases.Cliente
 import actividadHibernate.modelo.clases.Taller
+import actividadHibernate.vista.Vista
 import jakarta.persistence.EntityExistsException
+import jakarta.persistence.EntityManager
 import jakarta.persistence.NoResultException
 import jakarta.persistence.Persistence
+import java.sql.SQLException
 
-private val entityManagerFactory = Persistence.createEntityManagerFactory("PersistenciaTaller")
-private val entityManager = entityManagerFactory.createEntityManager()
-private val transaction = entityManager.transaction
+private val vista: Vista = Vista()
+var gestor: GestorModelo = GestorModelo.getInstance()
+var connection : EntityManager = gestor.connect()
 
-fun selectClienteByDNI(dni: String): Cliente? {
-    val clienteQuery = entityManager.createQuery("from Cliente where dni = :id", Cliente::class.java)
-    clienteQuery.setParameter("id", dni)
-    return try {
-        clienteQuery.singleResult
-    } catch (e: NoResultException) {
-        return null
-    }
+fun onSelectAllCliente():List<Cliente> {
+        val listaClientes = connection.createQuery("FROM Cliente",Cliente::class.java).resultList as List<Cliente>
+        listaClientes.forEach {
+            println(it)
+        }
+        return listaClientes
 }
 
-fun selectTallerByCIF(cif: String): Taller? {
-    val tallerQuery = entityManager.createQuery("from Taller where id = :id", Taller::class.java)
-    tallerQuery.setParameter("id", cif)
-    return try {
-        tallerQuery.singleResult
-    } catch (e: NoResultException) {
-        return null
-    }
+
+fun onSelectId( id:String):Cliente{
+
+        connection.transaction.begin()
+        val cliente = connection.find(Cliente::class.java, id)
+        println(cliente)
+        connection.transaction.commit()
+    return cliente
 }
 
-fun insertTaller(taller: Taller): Boolean{
-    transaction.begin()
+
+fun onInsert(cliente:Cliente) {
     try {
-        entityManager.persist(taller)
-        transaction.commit()
-        return true
-    }catch (e: EntityExistsException){
-        transaction.rollback()
-        return false
+        connection.transaction.begin()
+        connection.persist(cliente)
+        connection.transaction.commit()
+
+    } catch (s: SQLException) {
+        connection.transaction.rollback()
     }
 }
 
+    fun onUpdate(cliente:Cliente) {
+        try {
+            connection.transaction.begin()
+            connection
+            connection.transaction.commit()
+        } catch (s: SQLException) {
+            s.printStackTrace()
+        } finally {
+
+        }
+    }
+
+    fun onDelete(id: String) {
+        try {
+            connection.transaction.begin()
+            val cliente: Cliente = connection.find(Cliente::class.java, id)
+            connection.remove(cliente)
+            connection.transaction.commit()
+        } catch (s: SQLException) {
+            connection.transaction.rollback()
+        }
+    }
