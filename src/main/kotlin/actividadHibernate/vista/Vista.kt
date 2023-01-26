@@ -43,7 +43,7 @@ class Vista {
         try {
             when (readln().toInt()) {
                 1 -> {
-                    AppController().onSelectId(Cliente("Jaime", "jaime@gmail.com", Direccion("hola",10,"101")),"1234")
+                    //AppController().onSelectId(Cliente("Jaime", "jaime@gmail.com", Direccion("hola",10,"101")),"1234")
                     menuProveedor()
                 }
 
@@ -190,13 +190,13 @@ class Vista {
                         1->{
                             println("Id:")
                             val id:String = readln()
-                            AppController().onDelete(id)
+                          //  AppController().onDelete(id)
                             menuProducto()
                         }
                         2 -> {
                             println("Tipo:")
                             val tipo:String = readln()
-                            AppController().onDelete("")
+                         //   AppController().onDelete("")
                             menuProducto()
                         }
                         else -> {

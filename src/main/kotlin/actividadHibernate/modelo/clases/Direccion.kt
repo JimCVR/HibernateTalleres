@@ -21,4 +21,8 @@ class Direccion(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
-)
+){
+    override fun toString(): String {
+        return "Direccion(calle='$calle', numero=$numero, cp='$cp', cliente=$cliente, taller=$taller, id=$id)"
+    }
+}

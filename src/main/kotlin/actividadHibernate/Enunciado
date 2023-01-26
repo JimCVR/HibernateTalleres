@@ -1,0 +1,36 @@
+ESPECIFICACIONES
+
+1. ALTA DE CLIENTES Y DE TALLERES -> 2 PUNTOS
+
+    a. La aplicación permitirá dar de alta un cliente junto con su dirección.
+    b. La aplicación permitirá dar de alta un taller junto con su dirección.
+
+2. ALTA DE PEDIDOS -> 2 PUNTOS
+
+    a. Un cliente puede dar de alta un pedido. Este pedido no tendrá un taller
+    asociado directamente, si no que, ese taller se le asignará a posteriori,
+    cuando un taller decida hacerse cargo de ese pedido.
+
+    b. Un taller puede consultar todos los pedidos que hay pendientes de ser
+    asignados, es decir, un taller puede consultar los pedidos que no tienen un
+    taller asociado. El taller tiene la opción de asignarse un pedido pendiente.
+
+3. CONSULTA DE PEDIDOS Y CLIENTES (POR PARTE DEL TALLER) -> 2 PUNTOS
+
+    a. Un taller puede consultar todos los pedidos que tiene asignados.
+    b. Un taller puede consultar todos los clientes con los que tiene relación.
+
+4. CONSULTA DE PEDIDOS Y TALLERES (POR PARTE DEL CLIENTE) -> 2 PUNTOS
+
+    a. Un cliente puede consultar todos los pedidos que ha realizado. Le saldrán TODOS los pedidos,
+    tanto los pendientes de asignación como los que ya tengan un taller asociado
+    b. Un cliente puede consultar todos los talleres con los que tiene relación.
+
+5. SISTEMA DE LOGGING -> 2 PUNTOS
+
+    a. La aplicación debe mostrar un menú inicial que permita loguearse, tanto a
+    clientes como a talleres.
+        i. Para un cliente: Se le pide el dni y la contraseña (os imagináis que
+        os pido que la encriptéis y la almacenéis encriptada en la BDD).
+
+        ii. Para un taller: Se le pide el CIF y la contraseña.

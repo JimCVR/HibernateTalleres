@@ -30,4 +30,8 @@ class Cliente (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
 
-)
+){
+    override fun toString(): String {
+        return "Cliente(nombre='$nombre', email='$email', direccion=$direccion, pedidos=$pedidos, talleres=$talleres, id=$id)"
+    }
+}
