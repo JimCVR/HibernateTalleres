@@ -11,7 +11,7 @@ class Pedido(
 
     @ManyToOne(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     @JoinColumn(name = "dni_cliente")
-    var cliente: Cliente,
+    var cliente: Cliente?=null,
 
     @Column(name="descripcion")
     var descripcion:String,
