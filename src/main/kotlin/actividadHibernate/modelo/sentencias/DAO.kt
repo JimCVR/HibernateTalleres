@@ -2,6 +2,7 @@ package actividadHibernate.modelo.sentencias
 
 import actividadHibernate.modelo.clases.Cliente
 import actividadHibernate.modelo.clases.Taller
+import jakarta.persistence.EntityExistsException
 import jakarta.persistence.NoResultException
 import jakarta.persistence.Persistence
 
@@ -26,6 +27,18 @@ fun selectTallerByCIF(cif: String): Taller? {
         tallerQuery.singleResult
     } catch (e: NoResultException) {
         return null
+    }
+}
+
+fun insertTaller(taller: Taller): Boolean{
+    transaction.begin()
+    try {
+        entityManager.persist(taller)
+        transaction.commit()
+        return true
+    }catch (e: EntityExistsException){
+        transaction.rollback()
+        return false
     }
 }
 
