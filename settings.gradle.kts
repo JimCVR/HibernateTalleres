@@ -1,3 +1,3 @@
 
-rootProject.name = "HibernateProject2"
+rootProject.name = "HibernateTalleres"
 

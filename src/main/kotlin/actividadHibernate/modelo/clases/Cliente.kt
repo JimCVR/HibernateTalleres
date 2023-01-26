@@ -7,6 +7,10 @@ class Cliente (
 
     @Column(name = "nombre")
     var nombre: String,
+
+    @Column(name = "contraseña")
+    var contraseña: String,
+
     @Column(name = "email")
     var email: String,
 
@@ -28,6 +32,6 @@ class Cliente (
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
+    var dni: String? = null
 
 )

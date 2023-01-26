@@ -6,7 +6,11 @@ import jakarta.persistence.*
 class Taller (
     @Id
     @Column(name = "cif")
-    var cif: String,
+    var cif: String? = null,
+
+    @Column(name = "contraseña")
+    var contraseña: String,
+
     @Column
     var nombre: String,
 
