@@ -25,7 +25,6 @@ class GestorModelo private constructor() {
     fun connect(): EntityManager {
         if (manager == null || manager!!.isOpen) {
             manager = emf.createEntityManager()
-            println("___/Conexion realizada correctamente")
         } else {
             println("___/Ya existe una conexion\\___")
         }

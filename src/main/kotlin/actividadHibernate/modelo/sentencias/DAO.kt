@@ -1,5 +1,6 @@
 package actividadHibernate.modelo.sentencias
 
+import actividadHibernate.modelo.GestorModelo
 import actividadHibernate.modelo.clases.Cliente
 import actividadHibernate.modelo.clases.Direccion
 import actividadHibernate.modelo.clases.Pedido
@@ -12,11 +13,11 @@ import jakarta.persistence.Persistence
 import java.sql.SQLException
 
 private val vista: Vista = Vista()
-private var emf: EntityManagerFactory = Persistence.createEntityManagerFactory("PersistenciaTaller")
-var connection: EntityManager = emf.createEntityManager()
+//private var emf: EntityManagerFactory = Persistence.createEntityManagerFactory("PersistenciaTaller")
+//var connection: EntityManager = emf.createEntityManager()
 
-/*var gestor: GestorModelo = GestorModelo.getInstance()
-var connection : EntityManager = gestor.connect()*/
+var gestor: GestorModelo = GestorModelo.getInstance()
+var connection : EntityManager = gestor.connect()
 //CLIENTES
 fun onSelectAllCliente(): List<Cliente> {
     val listaClientes = connection.createQuery("FROM Cliente", Cliente::class.java).resultList as List<Cliente>
@@ -147,7 +148,7 @@ fun onSelectAllPedidoCliente(cliente: Cliente): List<Pedido> {
 fun onSelectPedidosNoAsignados(): List<Pedido> {
     val listaPedidos =
         connection.createQuery(
-            "FROM Pedido where taller.pedidos is null",
+            "FROM Pedido where taller is null",
             Pedido::class.java
         ).resultList as List<Pedido>
     listaPedidos.forEach {
