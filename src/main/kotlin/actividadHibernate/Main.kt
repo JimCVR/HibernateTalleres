@@ -11,4 +11,8 @@ import jakarta.persistence.Persistence
 
 fun main() {
 
+
+    var vista: Vista = Vista()
+    var controller : AppController = AppController(vista)
+    controller.mainMenu()
 }

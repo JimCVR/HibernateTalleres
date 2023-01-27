@@ -24,7 +24,6 @@ fun onSelectAllCliente():List<Cliente> {
         return listaClientes
 }
 
-
 fun onSelectIdCliente(dni:String):Cliente{
 
     connection.transaction.begin()
@@ -121,8 +120,24 @@ fun onDeleteDireccion(id:Long) {
 }
 
     //PEDIDO
+    fun onSelectAllPedido():List<Pedido> {
+        val listaPedidos = connection.createQuery("FROM Pedido", Pedido::class.java).resultList as List<Pedido>
+        listaPedidos.forEach {
+            println(it)
+        }
+        return listaPedidos
+    }
+
 fun onSelectAllPedidoCliente(cliente: Cliente):List<Pedido> {
-    val listaPedidos = connection.createQuery("FROM Pedido where cliente.pedidos", Pedido::class.java).resultList as List<Pedido>
+    val listaPedidos = connection.createQuery("FROM Pedido where cliente = :cliente", Pedido::class.java).resultList as List<Pedido>
+    listaPedidos.forEach {
+        println(it)
+    }
+    return listaPedidos
+}
+
+fun onSelectPedidosNoAsignados():List<Pedido> {
+    val listaPedidos = connection.createQuery("FROM Pedido where taller is null", Pedido::class.java).resultList as List<Pedido>
     listaPedidos.forEach {
         println(it)
     }
@@ -130,7 +145,7 @@ fun onSelectAllPedidoCliente(cliente: Cliente):List<Pedido> {
 }
 
 fun onSelectAllPedidoTaller(taller: Taller):List<Pedido> {
-    val listaPedidos = connection.createQuery("FROM Pedido where taller.pedidos=", Pedido::class.java).resultList as List<Pedido>
+    val listaPedidos = connection.createQuery("FROM Pedido where taller = :taller", Pedido::class.java).resultList as List<Pedido>
     listaPedidos.forEach {
         println(it)
     }
