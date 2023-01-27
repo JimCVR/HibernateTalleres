@@ -17,27 +17,26 @@ class AppController(vista: Vista) {
 
 
     fun mainMenu() {
-        var option = vista.returnMainMenuOption()
-        while (option != 0)
+
+        do {
+          val option = vista.returnMainMenuOption()
             when (option) {
 
                 1 -> loginCliente(vista.returnDni(), vista.returnPassword())?.let { sessionMenuCliente(it) }
                 2 -> loginTaller(vista.returnCif(), vista.returnPassword())?.let { sessionMenuTaller(it) }
                 3 -> registerNewCustomer()
                 4 -> registerNewWorkshop()
-
                 0 -> vista.exitApp()
-
                 else -> vista.invalidOption()
+
             }
-
-
+        }while (option != 0)
     }
 
     //Creación del menú del cliente donde podemos realizar las diferentes funcionalidades del programa
     fun sessionMenuCliente(currentClient: Cliente) {
-        var option = vista.returnCustomerMenuOption()
-        while (option != 0)
+        do {
+            val option = vista.returnCustomerMenuOption()
             when (option) {
 
                 1 -> registerNewCustomer()
@@ -45,16 +44,17 @@ class AppController(vista: Vista) {
                 3 -> viewAllCustomerOrders(currentClient)
                 4 -> viewWorkshopsAssociated(currentClient)
                 5 -> mainMenu()
-
                 else -> vista.invalidOption()
+
             }
+        }while (option != 0)
     }
 
     //Creación del menú del taller donde podemos realizar las diferentes funcionalidades del programa
     fun sessionMenuTaller(currentWorkshop: Taller) {
-        var option = vista.returnWorkshopMenuOption()
 
-        while (option != 0) {
+        do{
+            val option = vista.returnWorkshopMenuOption()
             when (option) {
                 1 -> registerNewWorkshop()
                 2 -> viewNoOrdersAssociated()
@@ -63,7 +63,7 @@ class AppController(vista: Vista) {
                 5 -> mainMenu()
                 else -> vista.invalidOption()
             }
-        }
+        }while (option != 0)
     }
 
     fun crearDireccion(): Direccion {

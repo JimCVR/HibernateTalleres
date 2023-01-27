@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd0119c-d226-4235-89ac-64937bdbf373" name="Changes" comment="falta 1-4 y 2-2">
+    <list default="true" id="bbd0119c-d226-4235-89ac-64937bdbf373" name="Changes" comment="falta 1-4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/GestorModelo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/GestorModelo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" afterDir="false" />
     </list>
     <list id="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" name="Changes by adret" comment="Changes by adret" />
     <list id="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" name="Changes by Luis" comment="Changes by Luis" />
@@ -261,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674791535607</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="falta 1-4">
+      <created>1674817296829</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674817296829</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,6 +290,18 @@
     <MESSAGE value="falta 1-4 y 2-2" />
     <MESSAGE value="Changes by adret" />
     <MESSAGE value="Changes by Luis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Luis" />
+    <MESSAGE value="falta 1-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="falta 1-4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
