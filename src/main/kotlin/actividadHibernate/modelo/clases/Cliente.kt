@@ -32,7 +32,8 @@ class Cliente (
 
     @Id
     @Column(name = "dni")
-    var dni: String? = null,
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var dni: Long? = null,
 
 ){
     override fun toString(): String {

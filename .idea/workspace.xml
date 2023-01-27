@@ -6,15 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="bbd0119c-d226-4235-89ac-64937bdbf373" name="Changes" comment="session 3 code with me">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
-    <list id="ce4baf00-227a-48cf-be0b-b1877d395055" name="Changes by adret" comment="Changes by adret">
+    <list id="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" name="Changes by adret" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
     </list>
     <list id="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" name="Changes by Luis" comment="Changes by Luis">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Taller.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Taller.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +67,31 @@
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt">
+      <ranges>
+        <range start1="96" end1="97" start2="96" end2="97" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="99" end1="100" start2="99" end2="100" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="107" end1="108" start2="107" end2="108" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="110" end1="111" start2="110" end2="111" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="119" end1="121" start2="119" end2="128" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="124" end1="126" start2="131" end2="138" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="129" end1="131" start2="141" end2="148" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="139" end1="141" start2="156" end2="164" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="144" end1="145" start2="167" end2="177" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="147" end1="148" start2="179" end2="180" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt">
+      <ranges>
+        <range start1="27" end1="28" start2="27" end2="28" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
+        <range start1="59" end1="60" start2="59" end2="60" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
+        <range start1="132" end1="132" start2="132" end2="133" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
+        <range start1="146" end1="146" start2="147" end2="154" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
+        <range start1="207" end1="208" start2="215" end2="216" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -203,7 +230,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674781465053</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="session 3 code with me">
+      <created>1674783407878</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674783407878</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changes by adret">
+      <created>1674783413628</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674783413628</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes by Luis">
+      <created>1674783417336</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674783417336</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
