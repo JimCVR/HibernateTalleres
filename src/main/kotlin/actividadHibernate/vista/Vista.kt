@@ -1,5 +1,7 @@
 package actividadHibernate.vista
 
+import actividadHibernate.modelo.clases.Cliente
+import actividadHibernate.modelo.clases.Taller
 import java.util.*
 
 
@@ -30,7 +32,7 @@ class Vista {
             println("2. Consultar pedidos existentes")
             println("3. Ver pedidos asociados")
             println("4. Ver clientes asociados")
-            println("0. Atrás")
+            println("5. Atrás")
 
         } catch (e: InputMismatchException) {
             System.err.println(e.message)
@@ -46,7 +48,7 @@ class Vista {
             println("2. Realizar un pedido")
             println("3. Ver pedidos realizados")
             println("4. Ver talleres asociados")
-            println("0. Atrás")
+            println("5. Atrás")
         } catch (e: InputMismatchException) {
             System.err.println(e.message)
             returnCustomerMenuOption()

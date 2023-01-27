@@ -1,5 +1,6 @@
 package actividadHibernate.controlador
 
+import actividadHibernate.main
 import actividadHibernate.modelo.GestorModelo
 import actividadHibernate.modelo.clases.Cliente
 import actividadHibernate.modelo.clases.Direccion
@@ -52,7 +53,7 @@ class AppController(vista: Vista) {
                 2 -> newOrder(currentClient)
                 3 -> viewAllCustomerOrders(currentClient)
                 4 -> viewWorkshopsAssociated(currentClient)
-                0 -> vista.exitApp()
+                5 -> mainMenu()
 
                 else -> vista.invalidOption()
             }
@@ -68,7 +69,7 @@ class AppController(vista: Vista) {
                 2 -> viewNoOrdersAssociated()
                 3 -> viewAllWorkshopsOrders(currentWorkshop)
                 4 -> viewClientsAssociated(currentWorkshop)
-                0 -> vista.returnMainMenuOption()
+                5 -> mainMenu()
                 else -> vista.invalidOption()
             }
         }
@@ -98,6 +99,7 @@ class AppController(vista: Vista) {
         if (dni != null) {
             var cliente = onSelectIdCliente(dni)
             if (cliente?.contraseña.equals(password) && cliente?.dni == dni) {
+                cliente.toString()
                 return cliente
             }
         }
@@ -112,6 +114,7 @@ class AppController(vista: Vista) {
                 return taller
             }
         }
+        mainMenu()
         return null
     }
 
@@ -121,7 +124,7 @@ class AppController(vista: Vista) {
         try {
             onInsertPedido(newOrder)
             sessionMenuCliente(customer)
-        }catch (e:SQLException){
+        } catch (e: SQLException) {
             vista.error()
             sessionMenuCliente(customer)
         }
@@ -132,7 +135,7 @@ class AppController(vista: Vista) {
         try {
             onSelectAllPedidoCliente(customer)
             sessionMenuCliente(customer)
-        }catch (e:SQLException){
+        } catch (e: SQLException) {
             vista.error()
             sessionMenuCliente(customer)
         }
@@ -142,40 +145,44 @@ class AppController(vista: Vista) {
         try {
             onSelectAllPedidoTaller(workshop)
             sessionMenuTaller(workshop)
-        }catch (e:SQLException){
+        } catch (e: SQLException) {
             vista.error()
             sessionMenuTaller(workshop)
         }
     }
 
     fun viewWorkshopsAssociated(customer: Cliente) {
-
-        sessionMenuCliente(customer)
+        try {
+            onSelectTalleresClientes(customer)
+            sessionMenuCliente(customer)
+        } catch (e: SQLException) {
+            vista.error()
+            sessionMenuCliente(customer)
+        }
     }
 
     fun viewClientsAssociated(workshop: Taller) {
         try {
             onSelectAllPedidoTaller(workshop)
             sessionMenuTaller(workshop)
-        }catch (e:SQLException){
+        } catch (e: SQLException) {
             vista.error()
             sessionMenuTaller(workshop)
         }
-
     }
 
     fun viewNoOrdersAssociated() {
         try {
             onSelectPedidosNoAsignados()
             mainMenu()
-        }catch (e:SQLException){
+        } catch (e: SQLException) {
             vista.error()
             mainMenu()
         }
 
     }
 
-    }
+}
 
 
 
