@@ -51,7 +51,7 @@ class AppController(vista: Vista) {
                 1 -> registerNewCustomer()
                 2 -> newOrder(currentClient)
                 3 -> viewAllCustomerOrders(currentClient)
-                4 -> viewOrdersAssociated(currentClient)
+                4 -> viewWorkshopsAssociated(currentClient)
                 0 -> vista.exitApp()
 
                 else -> vista.invalidOption()
@@ -122,17 +122,27 @@ class AppController(vista: Vista) {
     }
 
     fun viewAllCustomerOrders(customer: Cliente) {
-        onSelectAllPedidoCliente(customer)
-        sessionMenuCliente(customer)
+        try {
+            onSelectAllPedidoCliente(customer)
+            sessionMenuCliente(customer)
+        }catch (e:SQLException){
+            vista.error()
+            sessionMenuCliente(customer)
+        }
     }
 
     fun viewAllWorkshopsOrders(workshop: Taller) {
-        onSelectAllPedidoTaller(workshop)
-        sessionMenuTaller(workshop)
+        try {
+            onSelectAllPedidoTaller(workshop)
+            sessionMenuTaller(workshop)
+        }catch (e:SQLException){
+            vista.error()
+            sessionMenuTaller(workshop)
+        }
     }
 
-    fun viewOrdersAssociated(customer: Cliente) {
-        onSelectAllPedidoCliente(customer)
+    fun viewWorkshopsAssociated(customer: Cliente) {
+
         sessionMenuCliente(customer)
     }
 
@@ -145,5 +155,5 @@ class AppController(vista: Vista) {
         onSelectPedidosNoAsignados()
     }
 
-}
+
 

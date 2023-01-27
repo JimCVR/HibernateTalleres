@@ -213,7 +213,7 @@ fun onSelectAllTaller():List<Taller> {
 }
 
 
-fun onSelectCifTaller(cif:String):Taller{
+fun onSelectCifTaller(cif:Long):Taller{
 
     connection.transaction.begin()
     val taller = connection.find(Taller::class.java, cif)
@@ -254,4 +254,13 @@ fun onDeleteTaller(cif: String) {
     } catch (s: SQLException) {
         connection.transaction.rollback()
     }
+}
+
+fun onSelectTalleresClientes(cliente: Cliente):List<Taller> {
+
+    val listaPedidos = connection.createQuery("FROM Taller where cliente = :cliente", Pedido::class.java).resultList as List<Pedido>
+    listaPedidos.forEach {
+        println(it)
+    }
+    return listaPedidos
 }
