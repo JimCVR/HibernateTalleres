@@ -6,7 +6,8 @@ import jakarta.persistence.*
 class Taller (
     @Id
     @Column(name = "cif")
-    var cif: String? = null,
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var cif: Long? = null,
 
     @Column(name = "contraseña")
     var contraseña: String,

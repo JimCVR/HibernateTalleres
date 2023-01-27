@@ -54,9 +54,9 @@ class Vista {
         return readln().toInt()
     }
 
-    fun returnDni(): String {
+    fun returnDni(): Long {
         println("Introduzca su dni:")
-        return readln()
+        return readln().toLong()
     }
 
     fun returnName () : String{
@@ -82,9 +82,9 @@ class Vista {
         println("Introduzca el codigo postal:")
         return readln()
     }
-    fun returnCif(): String {
+    fun returnCif(): Long {
         println("Introduzca el cif:")
-        return readln()
+        return readln().toLong()
     }
     fun returnPassword(): String {
         println("Introduzca su contraseña:")
@@ -93,6 +93,10 @@ class Vista {
 
     fun invalidOption(){
         println("Opción no existente")
+    }
+
+    fun error(){
+        println("Ha ocurrido un error inesperado.Prueba de nuevo")
     }
     fun exitApp() {
         println("Saliendo...")

@@ -94,10 +94,10 @@ class AppController(vista: Vista) {
     }
 
 
-    fun loginCliente(dni: String?, password: String?): Cliente? {
+    fun loginCliente(dni: Long?, password: String?): Cliente? {
         if (dni != null) {
             var cliente = onSelectIdCliente(dni)
-            if (cliente?.contraseña.equals(password) && cliente?.dni.equals(dni)) {
+            if (cliente?.contraseña.equals(password) && cliente?.dni == dni) {
                 return cliente
             }
         }
@@ -105,10 +105,10 @@ class AppController(vista: Vista) {
         return null
     }
 
-    fun loginTaller(cif: String?, password: String?): Taller? {
+    fun loginTaller(cif: Long?, password: String?): Taller? {
         if (cif != null) {
             var taller = onSelectCifTaller(cif)
-            if (taller?.contraseña.equals(password) && taller?.cif.equals(cif)) {
+            if (taller?.contraseña.equals(password) && taller?.cif == cif) {
                 return taller
             }
         }
@@ -117,8 +117,15 @@ class AppController(vista: Vista) {
 
     fun newOrder(customer: Cliente) {
         var newOrder = Pedido(descripcion = vista.returnDescription(), cliente = customer)
-        onInsertPedido(newOrder)
-        sessionMenuCliente(customer)
+
+        try {
+            onInsertPedido(newOrder)
+            sessionMenuCliente(customer)
+        }catch (e:SQLException){
+            vista.error()
+            sessionMenuCliente(customer)
+        }
+
     }
 
     fun viewAllCustomerOrders(customer: Cliente) {
@@ -147,12 +154,27 @@ class AppController(vista: Vista) {
     }
 
     fun viewClientsAssociated(workshop: Taller) {
-        onSelectAllPedidoTaller(workshop)
-        sessionMenuTaller(workshop)
+        try {
+            onSelectAllPedidoTaller(workshop)
+            sessionMenuTaller(workshop)
+        }catch (e:SQLException){
+            vista.error()
+            sessionMenuTaller(workshop)
+        }
+
     }
 
     fun viewNoOrdersAssociated() {
-        onSelectPedidosNoAsignados()
+        try {
+            onSelectPedidosNoAsignados()
+            mainMenu()
+        }catch (e:SQLException){
+            vista.error()
+            mainMenu()
+        }
+
+    }
+
     }
 
 
