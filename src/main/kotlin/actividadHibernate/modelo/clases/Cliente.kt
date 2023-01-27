@@ -31,8 +31,8 @@ class Cliente (
     var talleres: MutableSet<Taller>?=null,
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var dni: String? = null
+    @Column(name = "dni")
+    var dni: String? = null,
 
 ){
     override fun toString(): String {
