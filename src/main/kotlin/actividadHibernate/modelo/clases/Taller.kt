@@ -25,7 +25,4 @@ class Taller (
     @ManyToMany(mappedBy = "talleres",cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     var clientes: MutableSet<Cliente>?=null,
 ){
-    override fun toString(): String {
-        return "Taller(cif=$cif, contraseña='$contraseña', nombre='$nombre', direccion=$direccion, pedidos=$pedidos, clientes=$clientes)"
-    }
 }

@@ -18,6 +18,9 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("org.hibernate.orm:hibernate-core:6.1.6.Final")
     implementation("com.mysql:mysql-connector-j:8.0.31")
+// https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly("org.projectlombok:lombok:1.18.24")
+
 }
 
 tasks.test {

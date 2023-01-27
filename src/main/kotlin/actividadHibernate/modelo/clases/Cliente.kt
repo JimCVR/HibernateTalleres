@@ -36,7 +36,4 @@ class Cliente (
     var dni: Long? = null,
 
 ){
-    override fun toString(): String {
-        return "Cliente(nombre='$nombre', contraseña='$contraseña', email='$email', direccion=$direccion, pedidos=$pedidos, talleres=$talleres, dni=$dni)"
-    }
 }

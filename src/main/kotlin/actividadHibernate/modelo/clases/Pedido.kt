@@ -21,7 +21,5 @@ class Pedido(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long?=null
 ){
-    override fun toString(): String {
-        return "Pedido(taller=$taller, cliente=$cliente, descripcion='$descripcion', id=$id)"
-    }
+
 }

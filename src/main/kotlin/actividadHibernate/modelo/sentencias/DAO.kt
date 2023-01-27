@@ -73,7 +73,7 @@ fun onDeleteCliente(dni: Long) {
 fun onSelectAllDireccion(): List<Direccion> {
     val listaDirecciones = connection.createQuery("FROM Direccion", Direccion::class.java).resultList as List<Direccion>
     listaDirecciones.forEach {
-        println(it)
+        println(it.calle)
     }
     return listaDirecciones
 }
@@ -139,7 +139,7 @@ fun onSelectAllPedidoCliente(cliente: Cliente): List<Pedido> {
             Pedido::class.java
         ).resultList as List<Pedido>
     listaPedidos.forEach {
-        println(it)
+        println(it.descripcion)
     }
     return listaPedidos
 }
@@ -151,7 +151,7 @@ fun onSelectPedidosNoAsignados(): List<Pedido> {
             Pedido::class.java
         ).resultList as List<Pedido>
     listaPedidos.forEach {
-        println(it)
+        println(it.descripcion)
     }
     return listaPedidos
 }
@@ -163,7 +163,7 @@ fun onSelectPedidosAsignados(): List<Pedido> {
             Pedido::class.java
         ).resultList as List<Pedido>
     listaPedidos.forEach {
-        println(it)
+        println(it.descripcion)
     }
     return listaPedidos
 }
@@ -183,7 +183,7 @@ fun onSelectAllPedidoTaller(taller: Taller): List<Pedido> {
 fun onSelectIdPedido(id: Long): Pedido {
     connection.transaction.begin()
     val pedido = connection.find(Pedido::class.java, id)
-    println(pedido)
+    println(pedido.descripcion)
     connection.transaction.commit()
     return pedido
 }

@@ -14,17 +14,7 @@ class AppController(vista: Vista) {
     private var vista = Vista()
     private var connection = GestorModelo.getInstance()
 
-    fun onSelectId(myTable: Any, id: String) {
-        try {
-            connection.manager!!.transaction.begin()
-            val record = connection.manager!!.find(myTable::class.java, id)
-            println(record)
-            connection.manager!!.transaction.commit()
-        } catch (s: SQLException) {
-            s.printStackTrace()
-        } finally {
-        }
-    }
+
 
     fun mainMenu() {
         var option = vista.returnMainMenuOption()
@@ -32,7 +22,7 @@ class AppController(vista: Vista) {
             when (option) {
 
                 1 -> loginCliente(vista.returnDni(), vista.returnPassword())?.let { sessionMenuCliente(it) }
-                2 -> loginTaller(vista.returnDni(), vista.returnPassword())?.let { sessionMenuTaller(it) }
+                2 -> loginTaller(vista.returnCif(), vista.returnPassword())?.let { sessionMenuTaller(it) }
                 3 -> registerNewCustomer()
                 4 -> registerNewWorkshop()
 
@@ -40,6 +30,7 @@ class AppController(vista: Vista) {
 
                 else -> vista.invalidOption()
             }
+
 
     }
 
@@ -82,7 +73,7 @@ class AppController(vista: Vista) {
 
     //Este metodo no tiene sentido llamarlo en el menu de talleres, ya que para acceder previamente al menu hay que tener un taller creado
     fun registerNewWorkshop() {
-        var taller: Taller = Taller(vista.returnCif(), vista.returnPassword(), vista.returnName(), crearDireccion())
+        var taller: Taller = Taller(null,vista.returnPassword(), vista.returnName(), crearDireccion())
         onInsertTaller(taller)
         mainMenu()
     }
@@ -111,6 +102,7 @@ class AppController(vista: Vista) {
         if (cif != null) {
             var taller = onSelectCifTaller(cif)
             if (taller?.contraseña.equals(password) && taller?.cif == cif) {
+                taller.toString()
                 return taller
             }
         }
