@@ -5,6 +5,7 @@ import actividadHibernate.modelo.clases.Cliente
 import actividadHibernate.modelo.clases.Direccion
 import actividadHibernate.modelo.clases.Pedido
 import actividadHibernate.modelo.clases.Taller
+import actividadHibernate.modelo.sentencias.*
 import actividadHibernate.vista.Vista
 import java.sql.SQLException
 
@@ -62,7 +63,7 @@ class AppController(vista: Vista) {
         while (option != 0) {
             when (option) {
                 1 -> registerNewWorkshop()
-                2 -> //consultar pedidos existentes
+                2 -> //select pedido when pedido.taller==null
                 3 -> viewAllWorkshopsOrders(currentWorkshop)
                 4 -> viewClientsAssociated(currentWorkshop)
                     0 -> vista.returnMainMenuOption()
@@ -79,8 +80,8 @@ class AppController(vista: Vista) {
     //Este metodo no tiene sentido llamarlo en el menu de talleres, ya que para acceder previamente al menu hay que tener un taller creado
     fun registerNewWorkshop() {
         var taller: Taller = Taller(vista.returnCif(), vista.returnPassword(), vista.returnName(), crearDireccion())
-        insertTaller(taller)
-        if (insertTaller(taller) == true) {
+        onInsertTaller(taller)
+        if (onInsertTaller(taller) == true) {
             println("El taller se ha dado de alta correctamente")
         } else {
             println("El taller no se ha podido dar de alta correctamente")
@@ -97,7 +98,7 @@ class AppController(vista: Vista) {
 
     fun loginCliente(dni: String?, password: String?): Cliente? {
         if (dni != null) {
-            var cliente = selectClienteByDNI(dni)
+            var cliente = onSelectIdCliente(dni)
             if (cliente?.contraseña.equals(password) && cliente?.dni.equals(dni)) {
                 return cliente
             }
@@ -108,7 +109,7 @@ class AppController(vista: Vista) {
 
     fun loginTaller(cif: String?, password: String?): Taller? {
         if (cif != null) {
-            var taller = selectTallerByCIF(cif)
+            var taller = onSelectCifTaller(cif)
             if (taller?.contraseña.equals(password) && taller?.cif.equals(cif)) {
                 return taller
             }
@@ -129,7 +130,7 @@ class AppController(vista: Vista) {
 
     fun viewAllWorkshopsOrders(workshop: Taller){
         //Buscar en la BD
-        workshop.pedidos?.forEach { println(it) }
+        onSelectAllPedido()
 
     }
 
@@ -140,11 +141,6 @@ class AppController(vista: Vista) {
     fun viewClientsAssociated(workshop: Taller){
         workshop.clientes?.forEach{ println(it) }
     }
-
-    fun viewExistingOrders(orders: Pedido){
-        
-    }
-
 
 
 }
