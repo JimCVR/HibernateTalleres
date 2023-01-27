@@ -32,8 +32,11 @@ class AppController(vista: Vista) {
 
                 1 -> loginCliente(vista.returnDni(), vista.returnPassword())?.let { sessionMenuCliente(it) }
                 2 -> loginTaller(vista.returnDni(), vista.returnPassword())?.let { sessionMenuTaller(it) }
+                3 -> registerNewCustomer()
+                4 -> registerNewWorkshop()
 
                 0 -> vista.exitApp()
+
                 else -> vista.invalidOption()
             }
 
@@ -48,7 +51,7 @@ class AppController(vista: Vista) {
                 1 -> registerNewCustomer()
                 2 -> newOrder(currentClient)
                 3 -> viewAllCustomerOrders(currentClient)
-                4 -> viewWorkshopAssociated(currentClient)
+                4 -> viewOrdersAssociated(currentClient)
                 0 -> vista.exitApp()
 
                 else -> vista.invalidOption()
@@ -62,10 +65,10 @@ class AppController(vista: Vista) {
         while (option != 0) {
             when (option) {
                 1 -> registerNewWorkshop()
-                2 -> //select pedido when pedido.taller==null
+                2 -> viewNoOrdersAssociated()
                 3 -> viewAllWorkshopsOrders(currentWorkshop)
                 4 -> viewClientsAssociated(currentWorkshop)
-                    0 -> vista.returnMainMenuOption()
+                0 -> vista.returnMainMenuOption()
                 else -> vista.invalidOption()
             }
         }
@@ -80,17 +83,12 @@ class AppController(vista: Vista) {
     fun registerNewWorkshop() {
         var taller: Taller = Taller(vista.returnCif(), vista.returnPassword(), vista.returnName(), crearDireccion())
         onInsertTaller(taller)
-        if (onInsertTaller(taller) == true) {
-            println("El taller se ha dado de alta correctamente")
-        } else {
-            println("El taller no se ha podido dar de alta correctamente")
-        }
     }
 
     fun registerNewCustomer() {
         var customer: Cliente =
             Cliente(vista.returnName(), vista.returnPassword(), vista.returnEmail(), crearDireccion())
-            onInsertCliente(customer)
+        onInsertCliente(customer)
     }
 
 
@@ -101,7 +99,7 @@ class AppController(vista: Vista) {
                 return cliente
             }
         }
-       mainMenu()
+        mainMenu()
         return null
     }
 
@@ -121,25 +119,24 @@ class AppController(vista: Vista) {
     }
 
     fun viewAllCustomerOrders(customer: Cliente) {
-       onSelectAllPedido(customer)
-
-        //Buscar todos los pedidos asociados al cliente
+        onSelectAllPedidoCliente(customer)
     }
 
-    fun viewAllWorkshopsOrders(workshop: Taller){
-        //Buscar en la BD
-        onSelectAllPedido()
-
+    fun viewAllWorkshopsOrders(workshop: Taller) {
+        onSelectAllPedidoTaller(workshop)
     }
 
-    fun viewWorkshopAssociated(customer: Cliente){
-        customer.talleres?.forEach{ println(it) }
+    fun viewOrdersAssociated(customer: Cliente) {
+        onSelectAllPedidoCliente(customer)
     }
 
-    fun viewClientsAssociated(workshop: Taller){
-        workshop.clientes?.forEach{ println(it) }
+    fun viewClientsAssociated(workshop: Taller) {
+        onSelectAllPedidoTaller(workshop)
     }
 
+    fun viewNoOrdersAssociated() {
+        onSelectPedidosNoAsignados()
+    }
 
 }
 

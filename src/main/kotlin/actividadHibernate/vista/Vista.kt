@@ -11,6 +11,9 @@ class Vista {
             println("****Introduzca una opcion****")
             println("1. Iniciar sesión (Cliente)")
             println("2. Iniciar sesión (Taller)")
+            println("3. Dar de alta a un cliente")
+            println("4. Dar de alta a un taller")
+
             println("0. Salir")
             //Si se introduce algo que no sea un int saltara el mensaje de la excepcion y se vuelve a llamar al metodo
         } catch (e: InputMismatchException) {
