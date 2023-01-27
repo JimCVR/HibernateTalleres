@@ -25,7 +25,7 @@ class AppController(vista: Vista) {
         }
     }
 
-    fun resultMainMenu() {
+    fun mainMenu() {
         var option = vista.returnMainMenuOption()
         while (option != 0)
             when (option) {
@@ -91,8 +91,7 @@ class AppController(vista: Vista) {
     fun registerNewCustomer() {
         var customer: Cliente =
             Cliente(vista.returnName(), vista.returnPassword(), vista.returnEmail(), crearDireccion())
-
-        //Falta llamar al modelo para realizar el instert en la BD
+            onInsertCliente(customer)
     }
 
 
@@ -103,7 +102,7 @@ class AppController(vista: Vista) {
                 return cliente
             }
         }
-        sessionMenuCliente()
+       mainMenu()
         return null
     }
 
@@ -119,11 +118,11 @@ class AppController(vista: Vista) {
 
     fun newOrder(customer: Cliente) {
         var newOrder = Pedido(descripcion = vista.returnDescription(), cliente = customer)
-        //Guardar el pedido en la base de datos
+        onInsertPedido(newOrder)
     }
 
     fun viewAllCustomerOrders(customer: Cliente) {
-        customer.pedidos?.forEach { println(it) }
+       onSelectAllPedido(customer)
 
         //Buscar todos los pedidos asociados al cliente
     }
