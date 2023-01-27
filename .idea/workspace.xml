@@ -4,19 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd0119c-d226-4235-89ac-64937bdbf373" name="Changes" comment="session 3 code with me">
+    <list default="true" id="bbd0119c-d226-4235-89ac-64937bdbf373" name="Changes" comment="session 4 code with me">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
-    </list>
-    <list id="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" name="Changes by adret" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
+    </list>
+    <list id="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" name="Changes by adret" comment="Changes by adret">
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" afterDir="false" />
     </list>
     <list id="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" name="Changes by Luis" comment="Changes by Luis">
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Direccion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Direccion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Pedido.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Pedido.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Taller.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Taller.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,25 +79,69 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt">
       <ranges>
-        <range start1="96" end1="97" start2="96" end2="97" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="99" end1="100" start2="99" end2="100" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="107" end1="108" start2="107" end2="108" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="110" end1="111" start2="110" end2="111" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="119" end1="121" start2="119" end2="128" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="124" end1="126" start2="131" end2="138" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
-        <range start1="129" end1="131" start2="141" end2="148" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
-        <range start1="139" end1="141" start2="156" end2="164" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="144" end1="145" start2="167" end2="177" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="147" end1="148" start2="179" end2="180" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="2" end1="2" start2="2" end2="3" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="15" end1="26" start2="16" end2="17" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="33" end1="34" start2="24" end2="25" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="41" end1="41" start2="32" end2="33" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="54" end1="55" start2="46" end2="47" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="70" end1="71" start2="62" end2="63" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="83" end1="84" start2="75" end2="76" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="100" end1="100" start2="92" end2="93" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="111" end1="111" start2="104" end2="105" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="114" end1="114" start2="108" end2="109" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="118" end1="119" start2="113" end2="114" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
+        <range start1="123" end1="124" start2="118" end2="119" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="134" end1="135" start2="129" end2="130" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="144" end1="145" start2="139" end2="140" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="151" end1="153" start2="146" end2="153" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="159" end1="160" start2="159" end2="160" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="163" end1="164" start2="163" end2="163" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="170" end1="171" start2="169" end2="170" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="177" end1="178" start2="176" end2="177" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt">
       <ranges>
-        <range start1="27" end1="28" start2="27" end2="28" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="59" end1="60" start2="59" end2="60" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="132" end1="132" start2="132" end2="133" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="146" end1="146" start2="147" end2="154" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="207" end1="208" start2="215" end2="216" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="7" end1="7" start2="7" end2="8" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
+        <range start1="18" end1="25" start2="19" end2="26" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="27" end1="28" start2="28" end2="29" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="30" end1="32" start2="31" end2="33" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="37" end1="38" start2="38" end2="39" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="48" end1="49" start2="49" end2="50" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="51" end1="52" start2="52" end2="53" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="59" end1="71" start2="60" end2="73" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="73" end1="74" start2="75" end2="76" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="79" end1="80" start2="81" end2="82" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="82" end1="84" start2="84" end2="86" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="89" end1="90" start2="91" end2="92" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="100" end1="101" start2="102" end2="103" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="111" end1="112" start2="113" end2="114" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="114" end1="115" start2="116" end2="117" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="122" end1="130" start2="124" end2="132" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="131" end1="132" start2="133" end2="134" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="133" end1="134" start2="135" end2="140" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="135" end1="136" start2="141" end2="142" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="140" end1="142" start2="146" end2="152" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="143" end1="144" start2="153" end2="154" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="147" end1="149" start2="157" end2="164" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="150" end1="151" start2="165" end2="166" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="155" end1="157" start2="170" end2="176" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="158" end1="159" start2="177" end2="178" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="163" end1="164" start2="182" end2="183" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="166" end1="167" start2="185" end2="186" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
+        <range start1="172" end1="173" start2="191" end2="192" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="183" end1="184" start2="202" end2="203" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="194" end1="195" start2="213" end2="214" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="197" end1="198" start2="216" end2="217" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="205" end1="208" start2="224" end2="227" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="215" end1="216" start2="234" end2="235" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="225" end1="226" start2="244" end2="246" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="227" end1="228" start2="247" end2="247" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="230" end1="232" start2="249" end2="250" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="236" end1="237" start2="254" end2="255" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="258" end1="259" start2="276" end2="277" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="260" end1="263" start2="278" end2="285" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
+        <range start1="264" end1="265" start2="286" end2="288" changelist="e5e58b5a-5756-486e-b5d6-e7940e9e79c2" />
       </ranges>
     </file>
   </component>
@@ -251,7 +303,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674783417336</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="session 4 code with me">
+      <created>1674785315329</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674785315329</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changes by adret">
+      <created>1674785335288</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674785335288</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Changes by Luis">
+      <created>1674785339633</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674785339633</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,6 +343,7 @@
     <MESSAGE value="session 1 code with me" />
     <MESSAGE value="session 2 code with me" />
     <MESSAGE value="session 3 code with me" />
+    <MESSAGE value="session 4 code with me" />
     <MESSAGE value="Changes by adret" />
     <MESSAGE value="Changes by Luis" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes by Luis" />

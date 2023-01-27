@@ -116,7 +116,7 @@ class AppController(vista: Vista) {
     }
 
     fun newOrder(customer: Cliente) {
-        var newOrder = Pedido(descripcion = vista.returnDescription(), cliente = customer)
+        var newOrder = Pedido(cliente = customer,descripcion = vista.returnDescription())
 
         try {
             onInsertPedido(newOrder)

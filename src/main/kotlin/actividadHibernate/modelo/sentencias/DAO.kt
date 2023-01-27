@@ -5,6 +5,7 @@ import actividadHibernate.modelo.clases.Direccion
 import actividadHibernate.modelo.clases.Pedido
 import actividadHibernate.modelo.clases.Taller
 import actividadHibernate.vista.Vista
+import jakarta.persistence.EntityExistsException
 import jakarta.persistence.EntityManager
 import jakarta.persistence.EntityManagerFactory
 import jakarta.persistence.Persistence
@@ -156,7 +157,7 @@ fun onSelectPedidosAsignados():List<Pedido> {
 fun onSelectAllPedidoTaller(taller: Taller):List<Pedido> {
     val listaPedidos = connection.createQuery("FROM Pedido where taller = :taller", Pedido::class.java).resultList as List<Pedido>
     listaPedidos.forEach {
-        println(it)
+        println(it.cliente?.nombre)
     }
     return listaPedidos
 }
