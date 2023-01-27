@@ -6,8 +6,8 @@
              version="3.0">
 
     <persistence-unit name="PersistenciaTaller">
-        <class>actividadHibernate.modelo.clases.Taller</class>
         <class>actividadHibernate.modelo.clases.Cliente</class>
+        <class>actividadHibernate.modelo.clases.Taller</class>
         <class>actividadHibernate.modelo.clases.Direccion</class>
         <class>actividadHibernate.modelo.clases.Pedido</class>
 

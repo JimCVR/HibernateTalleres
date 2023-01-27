@@ -1,20 +1,21 @@
 package actividadHibernate.modelo.sentencias
 
-import actividadHibernate.modelo.GestorModelo
 import actividadHibernate.modelo.clases.Cliente
 import actividadHibernate.modelo.clases.Direccion
 import actividadHibernate.modelo.clases.Pedido
 import actividadHibernate.modelo.clases.Taller
 import actividadHibernate.vista.Vista
-import jakarta.persistence.EntityExistsException
 import jakarta.persistence.EntityManager
-import jakarta.persistence.NoResultException
+import jakarta.persistence.EntityManagerFactory
 import jakarta.persistence.Persistence
 import java.sql.SQLException
 
 private val vista: Vista = Vista()
-var gestor: GestorModelo = GestorModelo.getInstance()
-var connection : EntityManager = gestor.connect()
+private var emf: EntityManagerFactory = Persistence.createEntityManagerFactory("PersistenciaTaller")
+var connection: EntityManager = emf.createEntityManager()
+
+/*var gestor: GestorModelo = GestorModelo.getInstance()
+var connection : EntityManager = gestor.connect()*/
     //CLIENTES
 fun onSelectAllCliente():List<Cliente> {
         val listaClientes = connection.createQuery("FROM Cliente",Cliente::class.java).resultList as List<Cliente>

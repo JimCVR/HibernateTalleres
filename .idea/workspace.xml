@@ -4,25 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd0119c-d226-4235-89ac-64937bdbf373" name="Changes" comment="session 2 code with me">
+    <list default="true" id="bbd0119c-d226-4235-89ac-64937bdbf373" name="Changes" comment="session 3 code with me">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/GestorModelo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/GestorModelo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Direccion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Direccion.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Pedido.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Pedido.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Taller.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Taller.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <list id="ce4baf00-227a-48cf-be0b-b1877d395055" name="Changes by adret" comment="Changes by adret">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" afterDir="false" />
     </list>
     <list id="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" name="Changes by Luis" comment="Changes by Luis">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/controlador/AppController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/clases/Cliente.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,32 +65,6 @@
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/Main.kt">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="2" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="2" end1="6" start2="3" end2="4" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="7" end1="10" start2="5" end2="5" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="13" end1="13" start2="8" end2="12" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/modelo/sentencias/DAO.kt">
-      <ranges>
-        <range start1="25" end1="26" start2="25" end2="25" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="123" end1="123" start2="122" end2="130" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="124" end1="125" start2="131" end2="132" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="130" end1="130" start2="137" end2="145" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="132" end1="133" start2="147" end2="148" changelist="bbd0119c-d226-4235-89ac-64937bdbf373" />
-        <range start1="139" end1="141" start2="154" end2="155" changelist="ce4baf00-227a-48cf-be0b-b1877d395055" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/kotlin/actividadHibernate/vista/Vista.kt">
-      <ranges>
-        <range start1="13" end1="13" start2="13" end2="16" changelist="aaddc1f7-1e5e-4ec6-81c2-411103586c7d" />
-        <range start1="104" end1="107" start2="107" end2="107" changelist="ce4baf00-227a-48cf-be0b-b1877d395055" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -216,7 +182,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674779549546</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="session 3 code with me">
+      <created>1674781446744</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674781446744</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changes by adret">
+      <created>1674781459865</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674781459865</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes by Luis">
+      <created>1674781465053</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674781465053</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +221,7 @@
     <MESSAGE value="estructura intermedia de vista" />
     <MESSAGE value="session 1 code with me" />
     <MESSAGE value="session 2 code with me" />
+    <MESSAGE value="session 3 code with me" />
     <MESSAGE value="Changes by adret" />
     <MESSAGE value="Changes by Luis" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes by Luis" />
