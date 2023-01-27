@@ -152,8 +152,7 @@ fun onSelectAllPedidoTaller(taller: Taller):List<Pedido> {
     return listaPedidos
 }
 
-fun onSelectIdPedido( id:String):Pedido{
-
+fun onSelectIdPedido( id:Long):Pedido{
     connection.transaction.begin()
     val pedido = connection.find(Pedido::class.java, id)
     println(pedido)

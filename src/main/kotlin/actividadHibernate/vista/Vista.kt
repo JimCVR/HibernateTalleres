@@ -102,9 +102,6 @@ class Vista {
         println("Introduzca su descripcion:")
         return readln()
     }
-
-
-
 }
 
 

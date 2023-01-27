@@ -31,7 +31,6 @@ class AppController(vista: Vista) {
             when (option) {
 
                 1 -> loginCliente(vista.returnDni(), vista.returnPassword())?.let { sessionMenuCliente(it) }
-
                 2 -> loginTaller(vista.returnDni(), vista.returnPassword())?.let { sessionMenuTaller(it) }
 
                 0 -> vista.exitApp()
