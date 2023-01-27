@@ -83,12 +83,14 @@ class AppController(vista: Vista) {
     fun registerNewWorkshop() {
         var taller: Taller = Taller(vista.returnCif(), vista.returnPassword(), vista.returnName(), crearDireccion())
         onInsertTaller(taller)
+        mainMenu()
     }
 
     fun registerNewCustomer() {
         var customer: Cliente =
             Cliente(vista.returnName(), vista.returnPassword(), vista.returnEmail(), crearDireccion())
         onInsertCliente(customer)
+        mainMenu()
     }
 
 
@@ -116,22 +118,27 @@ class AppController(vista: Vista) {
     fun newOrder(customer: Cliente) {
         var newOrder = Pedido(descripcion = vista.returnDescription(), cliente = customer)
         onInsertPedido(newOrder)
+        sessionMenuCliente(customer)
     }
 
     fun viewAllCustomerOrders(customer: Cliente) {
         onSelectAllPedidoCliente(customer)
+        sessionMenuCliente(customer)
     }
 
     fun viewAllWorkshopsOrders(workshop: Taller) {
         onSelectAllPedidoTaller(workshop)
+        sessionMenuTaller(workshop)
     }
 
     fun viewOrdersAssociated(customer: Cliente) {
         onSelectAllPedidoCliente(customer)
+        sessionMenuCliente(customer)
     }
 
     fun viewClientsAssociated(workshop: Taller) {
         onSelectAllPedidoTaller(workshop)
+        sessionMenuTaller(workshop)
     }
 
     fun viewNoOrdersAssociated() {
